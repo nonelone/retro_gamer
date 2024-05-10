@@ -57,12 +57,18 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.network(
-            "https://wallpapercave.com/wp/wp2725020.jpg",
-            fit: BoxFit.fill,
-            width: 1920,
-            height: 1080,
-          ),
+          Container(
+              decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 117, 32, 245),
+                  Color.fromARGB(255, 255, 202, 68),
+                ],
+                begin: FractionalOffset(0.0, 0.0),
+                end: FractionalOffset(1.0, 1.0),
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
+          )),
           const Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
@@ -73,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: ClockTile(time: _time),
             ),
           )
