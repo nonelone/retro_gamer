@@ -41,3 +41,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+# Non-linux platforms
+/android/
+/ios/
+/macos/
+/web/
+/windows/
