@@ -16,11 +16,11 @@ class _ClockTileState extends State<ClockTile> {
       borderRadius: BorderRadius.circular(16.0),
       child: Container(
         height: 80,
-        width: 152,
+        width: 120,
         color: const Color.fromRGBO(0, 0, 0, .7),
         child: Center(
           child: Text(
-            '${widget.time.hour}:${widget.time.minute < 10 ? "0${widget.time.minute}" : widget.time.minute}:${widget.time.second < 10 ? "0${widget.time.second}" : widget.time.second}',
+            '${widget.time.hour}:${widget.time.minute < 10 ? "0${widget.time.minute}" : widget.time.minute}',
             style: const TextStyle(fontSize: 32, color: Colors.white),
           ),
         ),
