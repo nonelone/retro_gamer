@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:retro_gamer/shared/theme.dart';
 import 'package:retro_gamer/widgets/clock.dart';
 import 'package:retro_gamer/widgets/dock.dart';
+import 'package:retro_gamer/widgets/gameTile.dart';
+import 'package:retro_gamer/widgets/tray.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -82,7 +84,32 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(16),
               child: ClockTile(time: _time),
             ),
-          )
+          ),
+          const Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Tray(),
+            ),
+          ),
+          Align(
+              alignment: Alignment.center,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(32),
+                child: Container(
+                    width: MediaQuery.of(context).size.width / 1.1,
+                    height: MediaQuery.of(context).size.height / 1.5,
+                    color: Colors.black54,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 30,
+                          itemBuilder: (BuildContext context, int index) {
+                            return GameTile();
+                          }),
+                    )),
+              ))
         ],
       ),
     );
