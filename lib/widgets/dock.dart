@@ -54,6 +54,7 @@ class DockButton extends StatelessWidget {
 
 Map<IconData, String> dockButtons = {
   Icons.apps: "Apps",
+  Icons.home: "Home",
   Icons.person: "User",
   Icons.settings: "Settings",
   Icons.terminal: "Terminal",
