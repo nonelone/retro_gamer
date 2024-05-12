@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:retro_gamer/widgets/clock.dart';
+import 'package:retro_gamer/widgets/battery.dart';
+import 'package:retro_gamer/widgets/bluetooth.dart';
+import 'package:retro_gamer/widgets/network.dart';
+import 'package:retro_gamer/widgets/sound.dart';
 
 class Tray extends StatelessWidget {
   const Tray({super.key});
@@ -14,7 +17,12 @@ class Tray extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
-          children: [],
+          children: const [
+            BatteryWidget(),
+            SoundWidget(),
+            NetworkWidget(),
+            BluetoothWidget()
+          ],
         ),
       ),
     );
