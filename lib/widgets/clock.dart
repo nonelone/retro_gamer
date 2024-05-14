@@ -20,7 +20,7 @@ class _ClockTileState extends State<ClockTile> {
         color: const Color.fromRGBO(0, 0, 0, .7),
         child: Center(
           child: Text(
-            '${widget.time.hour}:${widget.time.minute < 10 ? "0${widget.time.minute}" : widget.time.minute}',
+            '${widget.time.hour < 10 ? "0${widget.time.hour}" : widget.time.hour}:${widget.time.minute < 10 ? "0${widget.time.minute}" : widget.time.minute}',
             style: const TextStyle(fontSize: 32, color: Colors.white),
           ),
         ),
