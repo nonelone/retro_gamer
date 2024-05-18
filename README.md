@@ -1,2 +1,2 @@
-# retro_gamer
-A kiosk-like front-end for raspberry pi written using flutter.
+# 🎮 Retro Game Frontend 
+Full screen game launcher for raspberry pi written using flutter.
